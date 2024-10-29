@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NumberList</string>
+    <string name="app_icon">App Icon</string>
+    <string name="sel_prompt_1">Currency 1</string>
+    <string name="empty" />
+    <string name="convert_currency">Show Number List</string>
+    <string name="unit_1">Unit 1</string>
+    <string name="sym">$</string>
+    <string name="amount_1">Enter n</string>
+    <string name="result">Result</string>
+    <string name="odd">Odd</string>
+    <string name="even">Even</string>
+    <string name="square">Square</string>
+    <string name="number_type">Number type</string>
+    <string name="show">Show</string>
+    <string name="error">Error! Please Try Again</string>
+</resources>

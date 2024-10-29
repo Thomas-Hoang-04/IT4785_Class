@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bar"
+            android:gravity="start|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:paddingVertical="6dp"
+    >
+        <ImageView
+                android:layout_width="34dp"
+                android:contentDescription="@string/app_icon"
+                android:layout_height="34dp" app:srcCompat="@drawable/images" android:id="@+id/imageView"
+                android:layout_marginVertical="12dp" android:layout_marginStart="20dp"/>
+        <TextView
+                android:text="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/app_title" android:textSize="27sp"
+                android:textColor="#D9D9D9" android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingHorizontal="12dp"
+    >
+        <TextView
+                android:text="@string/convert_currency"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="4dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        <EditText
+                android:hint="@string/amount_1"
+                android:autofillHints="number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/num"
+        />
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/radioGroup"
+        >
+            <TextView
+                    android:text="@string/number_type"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="4dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            <RadioButton
+                    android:text="@string/odd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/radioOdd"/>
+            <RadioButton
+                    android:text="@string/even"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/radioEven"/>
+            <RadioButton
+                    android:text="@string/square"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/radioSquare"/>
+        </RadioGroup>
+        <Button
+                android:text="@string/show"
+                android:id="@+id/show"
+                android:textSize="16sp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <TextView
+                android:text="@string/empty"
+                android:id="@+id/error"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="4dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:divider="?android:dividerHorizontal">
+        <TextView
+                android:text="@string/result"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        />
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/num_list"
+                android:layout_marginTop="10dp"
+        />
+    </LinearLayout>
+
+
+
+</LinearLayout>
