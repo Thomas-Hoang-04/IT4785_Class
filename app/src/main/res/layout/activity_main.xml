@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main"
+        tools:context=".MainActivity"
+        android:fitsSystemWindows="true"
+>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:scrollbars="vertical"
+            app:layout_behavior="com.google.android.material.search.SearchBar$ScrollingViewBehavior"
+    />
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_bar"
+            app:statusBarForeground="?attr/colorSurface"
+            android:fitsSystemWindows="true"
+            app:layout_constraintTop_toTopOf="parent"
+    >
+        <com.google.android.material.search.SearchBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchBar"
+                android:hint="@string/search_mail"
+                app:navigationIcon="@drawable/ic_menu"
+        />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.search.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchView"
+            app:layout_anchor="@id/searchBar"
+            android:hint="@string/search_mail"
+            android:fitsSystemWindows="true"
+    >
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+        />
+    </com.google.android.material.search.SearchView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
